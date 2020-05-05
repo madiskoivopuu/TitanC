@@ -287,7 +287,7 @@ void CSniperThread::run() {
 				return;
 			}
 
-			std::string priceCheckCookie = *select_randomly(pricecheckCookies.begin(), pricecheckCookies.end());
+			//std::string priceCheckCookie = *select_randomly(pricecheckCookies.begin(), pricecheckCookies.end());
 			bool bMoveToNewAccount = false;
 			while (!bMoveToNewAccount) {
 				for (std::string assetId : assetIds) {
@@ -306,7 +306,7 @@ void CSniperThread::run() {
 						}
 
 						// get item prices from catalog
-						bool success = rblx.getPricesFromCatalog(assetUrls[assetId], priceCheckCookie, data);
+						bool success = rblx.getPricesFromCatalog(assetUrls[assetId], "", data);
 						if (!success) {
 							if (settings["EnableTryingSnipePrint"] == "On") printf("<T-%d> Price check failed.\n", threadNum);
 
