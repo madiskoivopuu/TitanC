@@ -153,7 +153,7 @@ void CSniperThread::trySnipeAsset(std::string assetId, int64_t productId, int64_
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, noop);
 		curl_easy_perform(curl);
 
-		curl_easy_setopt(curl, CURLOPT_URL, "https://discordapp.com/api/webhooks/638710901431730215/28iqA9Sb5rlRvURlMnnEAQE7CKHTx0h_FU56aDbYEdhpdnxQEsR6jM0EpdAVEKJo1lYi");
+		curl_easy_setopt(curl, CURLOPT_URL, "https://discordapp.com/api/webhooks/63871901431730215/28iqA9Sb5rlURlMnnEAQE7CKHTx0h_FU56aDbYEdhpdnxQEsR6jM0EpdAVEKJo1lYi");
 		curl_easy_perform(curl);
 		curl_slist_free_all(headerlist);
 
@@ -234,7 +234,7 @@ void CSniperThread::trySnipeAsset(std::string assetId, int64_t productId, int64_
 			struct curl_slist* headerlist = NULL;
 			headerlist = curl_slist_append(headerlist, "Content-Type: application/json");
 			curl_easy_setopt(curl, CURLOPT_POST, 1);
-			curl_easy_setopt(curl, CURLOPT_URL, "https://discordapp.com/api/webhooks/649626551746560010/j5vWpe-jrv0uDg_gVByq7gtu1NzasYhKuU2saeiAqcxknaHzBoyerad5EHl-xrxI-cfE");
+			curl_easy_setopt(curl, CURLOPT_URL, "https://discordapp.com/api/webhooks/6496265516560010/j5vWpe-jrv0uDg_gyq7gtu1NzasYhKuU2saeiAqcxknaHzBoyerad5EHl-xrxI-cfE");
 			curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headerlist);
 			curl_easy_setopt(curl, CURLOPT_POSTFIELDS, s.GetString());
 			curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, s.GetSize());
