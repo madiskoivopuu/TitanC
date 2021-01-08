@@ -10,6 +10,7 @@
 #include <map>
 #include <array>
 #include <algorithm>
+#define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING
 #include <experimental/filesystem>
 #include <random>
 #include <iterator>
@@ -154,40 +155,6 @@ std::string& rtrim(std::string& str, const std::string& chars = "\t\n\v\f\r ")
 {
 	str.erase(str.find_last_not_of(chars) + 1);
 	return str;
-}
-
-bool validateVersion() {
-	CURL* curl = curl_easy_init();
-	CURLcode res;
-	std::string version;
-	curl_easy_setopt(curl, CURLOPT_URL, "https://vortex-b.xyz/api/ascensionsniper/version");
-	curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, 0);
-	curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
-	curl_easy_setopt(curl, CURLOPT_WRITEDATA, &version);
-	res = curl_easy_perform(curl);
-	curl_easy_cleanup(curl);
-	if (res == CURLE_OK)
-	{
-		if (version == CURRENT_VERSION)
-		{
-			return true;
-		}
-		else
-		{
-			std::cout << "There is a newer version available for Titan, please download that." << std::endl;
-			return false;
-		}
-	}
-	else
-	{
-		std::cout << "Failed to validate version due to a request error, please re-open the program." << std::endl;
-		return false;
-	}
-}
-
-bool validateWhitelist() {
-	// lazily removed the whitelist check
-	return true;
 }
 
 bool validateSettings() {

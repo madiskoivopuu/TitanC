@@ -48,8 +48,6 @@ extern std::vector<std::string> split(std::string stringToBeSplitted, std::strin
 extern std::map<std::string, std::string, CaseInsensitive> parse_headers(std::string str);
 
 extern void addCookie(std::string cookie);
-extern bool validateWhitelist();
-extern bool validateVersion();
 extern bool validateSettings();
 extern bool isStringNumber(std::string s);
 

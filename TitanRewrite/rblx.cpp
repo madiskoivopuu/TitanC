@@ -8,6 +8,8 @@
 
 #include <iostream>
 #include <sstream>
+#include <libxml/HTMLtree.h>
+#include <libxml/HTMLparser.h>
 #include <string>
 #include <istream>
 #include <iterator>

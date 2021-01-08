@@ -85,20 +85,11 @@ int main()
 	}
 
 
-	if (validateVersion() == false)
-	{
-		std::cin.get();
-		return 0;
-	}
-
-	if (validateWhitelist() == false)
-	{
-		std::cin.get();
-		return 0;
-	}
 	else bWhitelistValidated = true;
 
-	std::cout << "<=> Successfully authenticated your whitelist." << std::endl;
+	std::cout << "<=> No whitelist validation needed | Fixed by Bixmox#2482 in 5 seconds." << std::endl;
+	std::cout << "<=> Titan was made by Sparkly (https://github.com/SparklyCatTF2/TitanC)" << std::endl;
+	std::cout << "<=> Fuck the people who tried selling the 'fix'\n" << std::endl;
 
 	// Open asset IDs file
 	try
@@ -277,9 +268,6 @@ int main()
 	int failedChecks = 0;
 	while (true) {
 		sleepcp(10000000);
-
-		if (!validateWhitelist()) failedChecks += 1;
-		else failedChecks = 0;
 
 		// check if there are more than 4 failed checks
 		if (failedChecks > 4) bWhitelistValidated = false;

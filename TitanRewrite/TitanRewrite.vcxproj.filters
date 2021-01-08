@@ -30,9 +30,6 @@
     <ClCompile Include="CTokenCacher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="titan isnt releasing soon nubs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CSniperThread.h">
